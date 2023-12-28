@@ -18,8 +18,8 @@
     }
   },
   "scripts": {
-    "build": "del-cli 'lib/*' && microbundle --entry src/index.js --jsx React.createElement --jsxFragment React.Fragment --name react-best-gradient-color-picker --tsconfig tsconfig.build.json --no-compress",
-    "watch": "nodemon --watch src --ext js,jsx,ts,tsx --exec npm run build",
+    "build": "microbundle --entry src/index.js --jsx React.createElement --jsxFragment React.Fragment --name react-best-gradient-color-picker --tsconfig tsconfig.build.json",
+    "watch": "microbundle watch --entry src/index.js --jsx React.createElement --jsxFragment React.Fragment --name react-best-gradient-color-picker --tsconfig tsconfig.build.json --no-compress",
     "prepublishOnly": "npm run build",
     "check-release": "npm publish --dry-run",
     "release": "npm publish"
@@ -68,10 +68,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.1",
     "eslint-plugin-react": "^7.31.8",
-    "microbundle": "0.13.0",
-    "nodemon": "^3.0.2",
-    "ts-jest": "^28.0.8",
-    "ts-node": "^10.9.2"
+    "microbundle": "0.13.0"
   },
   "license": "MIT",
   "bugs": {
